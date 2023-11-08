@@ -1,0 +1,5 @@
+.shapePerso{
+    float: left;
+    shape-outside: url("src/assets/images/avatar.svg");
+    shape-margin: 15px;
+}

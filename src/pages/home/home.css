@@ -1,0 +1,26 @@
+.float{
+	animation: float 3s ease-in-out infinite;
+}
+
+.bgDevImage{ 
+	background-image: url("src/assets/images/Accueil-portfolio-dev.png");
+	background-size: cover;
+	background-position: center;
+	opacity: 90%;
+	height: 100vh;
+}
+
+@keyframes float {
+	0% {
+		
+		transform: translatey(0px);
+	}
+	50% {
+		
+		transform: translatey(20px);
+	}
+	100% {
+		
+		transform: translatey(0px);
+	}
+}

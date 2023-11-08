@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Sweety';
+    src: url('./assets/texte/Sweety.ttf') format('truetype');
+  }
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    background-color:#04181D;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+h1{
+    font-size: 5vw;
+}
+
+a{
+    font-size: 2vw;
+}
+
+p{
+    font-size: 1vw;
+}
