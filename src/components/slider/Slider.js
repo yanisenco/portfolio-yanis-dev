@@ -1,37 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './slider.scss';
 import pieuvre from '../../assets/images/pieuvre.jpg';
 import pieuvreColoriage from '../../assets/images/pieuvre-coloriage.jpg';
 
 const Slider = () => {
 
-    document.addEventListener('DOMContentLoaded', function(){
-      let banner = document.getElementById('banner-wrapper');
-      let devLayer = banner.querySelector('.dev');
-      let delta = 0;
-      
-      banner.addEventListener('mousemove', function(e){
-          delta = (e.clientX-e.offsetX);
-          devLayer.style.width = e.clientX + 500 - (banner.offsetWidth /window.innerWidth)*100 + (90-delta) +'px';
-      });
-  })
+  const [clipValue, setClipValue]= useState('0, auto, auto, 0')
+  const [offsetX, setOffsetX] = useState(null);
 
-    return (
-      <div className="container">
-          <div className='banner-wrapper' id='banner-wrapper'>
-          <div className='banner design'>
-            <div className='banner-content'>
-              <img src={pieuvreColoriage}/>
-            </div>
-          </div>
-          <div className='banner dev'>
-            <div className='banner-content'>
-              <img src={pieuvre}/>
-            </div>
-          </div>
-        </div>
+  const handleMouseMove = (e) => {
+    const element = e.target;
+    const x = e.clientX - element.getBoundingClientRect().left;
+    setOffsetX(x);
+  };
+
+  useEffect(()=>{
+    setClipValue(`0, ${offsetX}px, auto, 0`)
+  },[offsetX])
+
+  return (
+        <div onMouseMove={handleMouseMove} id="container">
+              <img src={pieuvre} className='image-1' id="topImage" style={{ clip: `rect(${clipValue})`}}/>
+              <img src={pieuvreColoriage} className='image-2' id="bottomImage"/>
       </div>
-    );
+  );
 };
 
 export default Slider;

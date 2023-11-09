@@ -1,12 +1,14 @@
 import React from 'react';
-import style from 'src/pages/home/home.css';
+import style from './home.css';
+import background from '../../assets/images/Accueil-portfolio-dev.png'
 
 const Home = () => {
     
     return (
-       
-            <h1>Welcome to my development Portfolio</h1> 
-
+        <div className='containerHome'>
+            <h1 className='titleHome'>Yanis Encognere developpeur</h1> 
+            <img src={background} className='bgDevImage'/>
+        </div>
     );
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import style from 'src/pages/contact/contact.css'
-import CardContact from 'src/components/cardContact/CardContact';
+import style from './contact.css'
+import CardContact from '../../components/cardContact/CardContact';
 
 const Contact = () => {
 

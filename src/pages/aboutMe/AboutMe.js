@@ -1,26 +1,24 @@
 import React from 'react';
 import style from './aboutme.css';
-import perso from 'src/assets/images/avatar.svg';
-import data from 'src/assets/texte/aboutme';
+import perso from '../../assets/images/avatar.svg';
+import data from '../../assets/texte/aboutme';
 
 const AboutMe = () => {
 
     const bulletPoint = data.presentation.map((presentation) => {
         return (
-            <li className='text-slate-200 mt-5 text-xl m-16 list-none'>{presentation}</li>
+            <li className=''>{presentation}</li>
         );
     }
 );
 
     return (
-        <div>
-            <div className="h-screen">
-                <img src={perso} className="shapePerso w-104" alt="" />
-                <div className="text-white">
+        <div className='containerAboutMe'>
+                <img src={perso} className="shapePerso" alt="" />
+                <div className="font">
                 {bulletPoint}
-                </div>
-            </div>
-            
+                <button className='buttonCv'>CV</button>        
+                </div>    
         </div>
     );
 };

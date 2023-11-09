@@ -1,5 +1,35 @@
 .shapePerso{
     float: left;
-    shape-outside: url("src/assets/images/avatar.svg");
+    shape-outside: url("../../assets/images/avatar.svg");
     shape-margin: 15px;
+}
+
+.font{
+    font-size: medium;
+    color: white;
+}
+
+.containerAboutMe {
+    width: 70vw;
+}
+
+.buttonCv{
+    margin: 5vh;
+    width: auto;
+}
+
+@media (max-width: 1050px) {
+    .containerAboutMe {
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .shapePerso{
+        justify-content: center;
+        float: none;
+    }
+    .buttonCv{
+        margin: 0;
+        width: 100%;
+    }
 }

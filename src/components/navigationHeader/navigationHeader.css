@@ -12,14 +12,13 @@
 	display: flex;
 	
 }
-a {
+.navBarTitle {
     transition: all .2s;
     position: relative;
     padding: 1rem 2rem;
     border-radius: 5px;
     text-decoration: none;
     color: unset;
-    
     &:hover {
         background-color: #eee;
     }
@@ -37,7 +36,7 @@ a {
 }
 
 @media (max-width: 768px) {
-    .navBar a{
+    .navBar .navBarTitle {
       display: none;
     }
 }

@@ -2,11 +2,15 @@ import React, {useState, useEffect, useRef} from 'react';
 import style from './navigationHeader.css';
 import Slider from '../slider/Slider';
 import VideoPlayer from '../videoPlayer/VideoPlayer';
+import AboutMe from '../../pages/aboutMe/AboutMe';
+import School from '../../pages/school/School';
+import Perso from '../../pages/perso/perso';
 
 const NavigationHeader = () => {
 
     const [scrollY, setScrollY] = useState(0);
     const [positionY, setPositionY] = useState(null);
+    
     useEffect(() => {
         const handleScroll = () => {
         setScrollY(window.scrollY);
@@ -69,30 +73,36 @@ const NavigationHeader = () => {
         <a 
         href={menuPart.url} 
         key={index}
+        className="navBarTitle"
         >
             {menuPart.title}
         </a>)
 
-    return (
+    return ( 
+    // TODO responsive  
     <div style={{position: 'absolute', width: '100vw',  height: '100vh'}}>
-
-        <div className="navBar" 
-            style={{position: scrollY < positionY ?'absolute' : 'fixed'}} ref={navBarRef}>
-            {/* ☰ */}
+       
+        <div 
+        className="navBar" 
+        style={{position: scrollY < positionY ?'absolute' : 'fixed'}} 
+        ref={navBarRef}>
                 {menuBar}
         </div>  
     
         <div id="first" className="section">
         A propos de moi
+        <AboutMe/>
         </div>
         <div id="second" className="section">
         Parcours
+        <School/>
         </div>
         <div id="third" className="section">
         Projets pro
         </div>
         <div id="fourth" className="section">
         Projet perso
+        <Perso/>
         </div>
         <div id="fifth" className="section">
         Recommandation
