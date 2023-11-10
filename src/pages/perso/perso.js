@@ -3,7 +3,7 @@ import style from './perso.css';
 import Slider from '../../components/slider/Slider';
 import VideoPlayer from '../../components/videoPlayer/VideoPlayer';
 
-const Perso = () => {
+const Perso = ({children}) => {
 
     const width = window.innerWidth;
     let responsiveContent = null;
@@ -15,8 +15,7 @@ const Perso = () => {
                     <p>Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association</p>
                 </div>   
                 <div className='contentPerso'>
-                    {/* <VideoPlayer/> */}
-                     <Slider /> 
+                     {children}
                 </div>
             </>
         } else {
@@ -24,8 +23,7 @@ const Perso = () => {
                 <div className='textePerso'>
                     <h1>Digitalisation</h1>
                     <div className='contentPerso'>
-                    {/* <VideoPlayer/> */}
-                        <Slider/>
+                        {children}
                     </div>
                     <p>Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association</p>
                 </div>   
