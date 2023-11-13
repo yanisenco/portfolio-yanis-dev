@@ -1,4 +1,4 @@
-.navBar {
+/* .navBar {
 	position: absolute;
 	top: 1rem;
 	left: 50%;
@@ -22,7 +22,7 @@
 	&:hover {
 		background-color: #eee;
 	}
-}
+} */
 
 .section {
 	/* position: relative;
