@@ -1,0 +1,38 @@
+.experience{
+  display: flex;
+}
+.timeline{
+  margin: 0 1vw;
+}
+.centerItem{
+  width:6%;
+}
+
+.time{
+  margin-top: 20px;
+  height: fit-content;
+  width: fit-content;
+  background-color: red;
+}
+
+.timeline{
+  position: relative;
+  width: 5px;
+  background-color: greenyellow;
+}
+
+.cercle {
+  width: 20px; 
+  height: 20px; 
+  background-color: greenyellow; 
+  border-radius: 50%; 
+  position: absolute;
+  top: 20px;
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+.dateH4{
+  top: 20px;
+  margin:0;
+}

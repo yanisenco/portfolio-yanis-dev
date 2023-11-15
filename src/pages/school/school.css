@@ -1,15 +1,28 @@
 .experienceBackground{
+    margin-top: 20px;
+    margin-bottom: 10vh;
     width: fit-content;
     background-color: aqua;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);;
 }
 
 .schoolTitle {
-    font-size: x-large;
+    margin: 0;
+    font-size: 2vw;
     color: black;
 }
 
 .schoolDescription{
-    font-size: medium;
+    font-size: 1vw;
     color: black;
 }
+
+@media (max-width: 900px) {
+    .experienceBackground{
+        margin-top: 20px;
+        margin-bottom: 2vh;
+        width: fit-content;
+        background-color: aqua;
+        box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);;
+    }
+  }

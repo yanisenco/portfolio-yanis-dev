@@ -9,6 +9,7 @@ import ImageProjet from '../imageProjet/ImageProjet';
 import pieuvre from '../../assets/images/pieuvre.jpg';
 import pieuvreCol from '../../assets/images/pieuvre-coloriage.jpg';
 import NavBar from '../navBar/NavBar';
+import Timeline from '../timeline/Timeline';
 
 const NavigationHeader = () => {
 
@@ -49,7 +50,7 @@ const NavigationHeader = () => {
         </div>
         <div id="second" className="section">
         Parcours
-        <School/>
+        <Timeline/>
         </div>
         <div id="third" className="section">
         Projets pro

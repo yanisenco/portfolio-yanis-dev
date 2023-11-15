@@ -5,9 +5,9 @@ import data from '../../assets/texte/aboutme';
 
 const AboutMe = () => {
 
-    const bulletPoint = data.presentation.map((presentation) => {
+    const bulletPoint = data.presentation.map((presentation, index) => {
         return (
-            <li className=''>{presentation}</li>
+            <li key={index}>{presentation}</li>
         );
     }
 );
