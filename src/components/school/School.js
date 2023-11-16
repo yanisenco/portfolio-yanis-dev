@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './school.css';
+import'./school.css';
 
 const School = ({title, description, style}) => {
 

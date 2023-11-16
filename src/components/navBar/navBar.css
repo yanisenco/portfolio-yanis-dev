@@ -5,9 +5,11 @@
 }
 
 .navBar {
+    backdrop-filter: blur(15px);
+    list-style: none;
     margin: auto;
     text-align: center;
-    width: 70vw;
+    width: fit-content;
     height: fit-content;
 	background-color: aliceblue;
     display: flex;
@@ -19,11 +21,14 @@
 }
 
 .navBarTitle {
-    backdrop-filter: blur(15px);
     border-radius: 5px;
     background-color: aliceblue;
     padding: 2vh;
 	color:black;
+
+    &:active{
+        background-color: rgb(192, 223, 250);
+    }
 } 
 
 .fixed{

@@ -2,6 +2,7 @@
     position: relative;
     height: 50vh;
     width: 100vw;
+    margin:auto;
 }
 .sizeConsole{
     width: fit-content;

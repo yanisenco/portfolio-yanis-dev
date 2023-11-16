@@ -1,13 +1,16 @@
 import React from 'react';
-import style from './aboutme.css';
+import './aboutme.css';
 import perso from '../../assets/images/avatar.svg';
 import data from '../../assets/texte/aboutme';
+import BoutonCv from '../../components/boutonCv/BoutonCv';
 
 const AboutMe = () => {
 
         const bulletPoint = data.presentation.map((presentation, index) => {
             return (
-                <li key={index}>{presentation}</li>
+                <li key={index} className='listStyle'>
+                    <p>{presentation}</p>
+                </li>
             );
         }
     );
@@ -17,7 +20,7 @@ const AboutMe = () => {
                 <img src={perso} className="shapePerso" alt="" />
                 <div className="font">
                 {bulletPoint}
-                <button className='buttonCv'>CV</button>        
+                <BoutonCv/>     
                 </div>    
         </div>
     );

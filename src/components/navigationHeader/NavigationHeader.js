@@ -3,8 +3,8 @@ import style from './navigationHeader.css';
 import Slider from '../slider/Slider';
 import VideoPlayer from '../videoPlayer/VideoPlayer';
 import AboutMe from '../../pages/aboutMe/AboutMe';
-import School from '../../pages/school/School';
-import Perso from '../../pages/perso/perso';
+import School from '../school/School';
+import Perso from '../perso/perso';
 import ImageProjet from '../imageProjet/ImageProjet';
 import pieuvre from '../../assets/images/pieuvre.jpg';
 import pieuvreCol from '../../assets/images/pieuvre-coloriage.jpg';
@@ -49,31 +49,29 @@ const NavigationHeader = () => {
     <div >
         <NavBar menuParts={menuParts}/>    
         <div id="first" className="section">
-        A propos de moi
-        <AboutMe/>
+            <h1>A propos de moi</h1>
+            <AboutMe/>
         </div>
         <div id="second" className="section">
-        Parcours
-        <Timeline/>
+            <h1>Parcours</h1>
+            <Timeline/>
         </div>
         <div id="third" className="section">
-        Projets pro
-        <Perso><ImageProjet src={pieuvre} id={"img1"}/></Perso>
-        <Perso><ImageProjet src={pieuvreCol} id={"img2"}/></Perso>
+            <h1>Projets pro</h1>
+            <Perso><ImageProjet src={pieuvre} id={"img1"}/></Perso>
+            <Perso><ImageProjet src={pieuvreCol} id={"img2"}/></Perso>
         </div>
         <div id="fourth" className="section">
-        Projet perso
-        <Perso><Slider/></Perso>
-        <Perso><VideoPlayer/></Perso>
- 
+            <h1>Projet perso</h1>
+            <Perso><Slider/></Perso>
+            <Perso><VideoPlayer/></Perso>
         </div>
         <div id="fifth" className="section">
-        Recommandation
+            <h1>Recommandation</h1>
         </div>
         <div id="six" className="section">
-        Contact
-        {width > 900 ?  <Console/> : <ContactMobile/>
-        }
+            <h1>Contact</h1>
+            {width > 900 ?  <Console/> : <ContactMobile/>}
         </div>
     </div>
     );

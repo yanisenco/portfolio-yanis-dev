@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './timeline.css';
-import School from '../../pages/school/School';
+import './timeline.css';
+import School from '../school/School';
 import useWidth from '../../hooks/useWidth';
 
 
@@ -83,11 +83,11 @@ const timeline = content.map((item, index)=>{
 
     return (
 
-
-    <ul>
+<div className='containerTimeline'>
+    <ul className='centerTimeline'>
       {timeline}
     </ul>
-
+</div>
 
     );
 };

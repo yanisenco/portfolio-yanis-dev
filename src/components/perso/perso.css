@@ -1,13 +1,13 @@
 .containerPerso{
     display: flex;
     width: 70vw;
+    margin:auto;
 }
 
 .contentPerso{
     width: 40vw;
     height: 20vw;
     margin: auto 0 auto 2vw;
-    /* background-color: bisque; */
     position: relative;
 }
 
@@ -23,12 +23,6 @@
         margin: auto ;
     }
     .containerPerso{
-        width: 90vw;
+        width: auto;
     }
-}
-
-.imgTest{
-    width: 100%; /* Faites en sorte que l'image occupe 100% de la largeur de la div parent */
-    height: 100%; /* Pour conserver le ratio de l'image, réglez également la hauteur à 100% si nécessaire */
-    object-fit: cover;
 }

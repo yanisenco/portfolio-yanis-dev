@@ -2,8 +2,8 @@
     margin-top: 20px;
     margin-bottom: 10vh;
     width: fit-content;
-    background-color: aqua;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);;
+    background-color: #0D564F;
+    box-shadow: 4px 4px 0 0 #0B3530;
 }
 
 .schoolTitle {
@@ -19,10 +19,7 @@
 
 @media (max-width: 900px) {
     .experienceBackground{
-        margin-top: 20px;
         margin-bottom: 2vh;
-        width: fit-content;
-        background-color: aqua;
-        box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);;
+        box-shadow: 2px 2px 0 0 #0B3530;
     }
   }

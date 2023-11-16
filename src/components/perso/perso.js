@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react';
 import style from './perso.css';
-import Slider from '../../components/slider/Slider';
-import VideoPlayer from '../../components/videoPlayer/VideoPlayer';
+import Slider from '../slider/Slider';
+import VideoPlayer from '../videoPlayer/VideoPlayer';
 import useWidth from '../../hooks/useWidth';
 
 const Perso = ({children}) => {
@@ -13,7 +13,7 @@ const Perso = ({children}) => {
             responsiveContent = 
             <>
                 <div className='textePerso'>
-                    <h1>Digitalisation</h1>
+                    <h2>Digitalisation</h2>
                     <p>Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association</p>
                 </div>   
                 <div className='contentPerso'>
@@ -23,7 +23,7 @@ const Perso = ({children}) => {
         } else {
             responsiveContent = 
                 <div className='textePerso'>
-                    <h1>Digitalisation</h1>
+                    <h2>Digitalisation</h2>
                     <div className='contentPerso'>
                         {children}
                     </div>

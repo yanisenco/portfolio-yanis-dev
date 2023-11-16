@@ -1,0 +1,7 @@
+.boutonCv {
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5em;
+    margin: auto;
+    cursor: pointer;
+  }

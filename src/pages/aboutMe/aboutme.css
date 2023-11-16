@@ -1,3 +1,7 @@
+.listStyle{
+    list-style: none;
+}
+
 .shapePerso{
     float: left;
     shape-outside: url("../../assets/images/avatar.svg");
@@ -13,6 +17,8 @@
 
 .containerAboutMe {
     width: 70vw;
+    margin:auto;
+    display: table;
 }
 
 .buttonCv{
@@ -27,7 +33,7 @@
         flex-direction: column;
     }
     .shapePerso{
-        justify-content: center;
+        margin: auto;
         float: none;
     }
     .buttonCv{
