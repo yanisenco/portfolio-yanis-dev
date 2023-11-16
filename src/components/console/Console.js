@@ -1,10 +1,6 @@
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import data from '../../assets/texte/contact';
-import style from './console.css';
-import classNames from 'classnames';
-import cross from '../../assets/images/cross.png';
-import line from '../../assets/images/line.png';
-import square from '../../assets/images/square.png';
+import './console.css';
 
 const Console = () => {
 
@@ -13,29 +9,86 @@ const Console = () => {
             <div>
                 <a href={contact.personalLink}>{contact.path}{contact.message}</a>
             </div>
-        );
-    }
-);
+            );
+        }
+    );
+
+    const parentRef = useRef(null);
+    const [isDragging, setIsDragging] = useState(false);
+    const [initialPos, setInitialPos] = useState({ x: 0, y: 0 });
+    const [position, setPosition] = useState({ x: 200, y: 0 });
+
+
+
+
+useEffect(() => {
+  const handleMouseMove = (event) => {
+    if (!isDragging) return;
+
+    const newX = initialPos.x + event.clientX - initialPos.clientX;
+    const newY = initialPos.y + event.clientY - initialPos.clientY;
+
+    setPosition({ x: newX, y: newY });
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  if (isDragging) {
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+  } else {
+    document.removeEventListener('mousemove', handleMouseMove);
+    document.removeEventListener('mouseup', handleMouseUp);
+  }
+
+  return () => {
+    document.removeEventListener('mousemove', handleMouseMove);
+    document.removeEventListener('mouseup', handleMouseUp);
+  };
+}, [isDragging, initialPos]);
+
+const handleMouseDown = (event) => {
+  event.preventDefault();
+  setIsDragging(true);
+  setInitialPos({
+    x: position.x,
+    y: position.y,
+    clientX: event.clientX,
+    clientY: event.clientY,
+  });
+};
 
     return (
-        <div className="w-200 h-128 bg-[#0c0c0c] border border-[#393939] drop-shadow-2xl" id="invite-de-contact">
-            <div className="h-7 bg-white flex justify-between">
-                <div className="flex">
-                    <h1 className="text-black">C:\_ contact prompt</h1>
+        <div className='containerConsole'>
+            <div 
+                className="sizeConsole" 
+                id="invite-de-contact"
+                style={{
+                    position:'absolute',
+                    top: position.y,
+                    left: position.x,
+                    cursor: 'move',
+                }}
+                onMouseDown={handleMouseDown}
+                ref={parentRef}
+            >
+                <div className="headerConsole">
+                    <div className="flex">
+                        <div className='closeButton'></div>
+                        <div className='reduceButton'></div>
+                        <div className='extendButton'></div>
+                        <h1 className="titleConsole">C:\_ contact prompt</h1>
+                    </div>                
                 </div>
-                <ul className="flex">
-                    <li className="px-4 py-0.5 hover:bg-gray-200 m-auto"><img src={line} className="w-4 h-4"/></li>
-                    <li className="px-4 py-0.5 hover:bg-gray-200 m-auto"><img src={square} className="w-4 h-4"/></li>
-                    <li className="px-4 py-0.5 hover:bg-gray-200 m-auto"><img src={cross} className="w-4 h-4"/></li>
-                </ul>
-                
-            </div>
-            <div className={classNames("text-white font-['consolas']")}>
-                <p>Yanis Portfolio [version 2.0.19045.2364]</p>
-                <p>(c) Yanis Corporation. All rights reserved.</p>
-                <div className="mt-4">
-                    {contacts}
-                </div>                
+                <div className="contentConsole">
+                    <p className='descriptionContent'>Yanis Portfolio [version 2.0.19045.2364]</p>
+                    <p>(c) Yanis Corporation. All rights reserved.</p>
+                    <div className="">
+                        {contacts}
+                    </div>                
+                </div>
             </div>
         </div>
 

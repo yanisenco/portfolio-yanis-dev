@@ -10,9 +10,13 @@ import pieuvre from '../../assets/images/pieuvre.jpg';
 import pieuvreCol from '../../assets/images/pieuvre-coloriage.jpg';
 import NavBar from '../navBar/NavBar';
 import Timeline from '../timeline/Timeline';
+import Console from '../console/Console';
+import ContactMobile from '../contactMobile/ContactMobile';
+import useWidth from '../../hooks/useWidth';
 
 const NavigationHeader = () => {
-
+    
+    const {width}= useWidth();
     const menuParts =[
         {
             title:"A propos de moi",
@@ -68,6 +72,8 @@ const NavigationHeader = () => {
         </div>
         <div id="six" className="section">
         Contact
+        {width > 900 ?  <Console/> : <ContactMobile/>
+        }
         </div>
     </div>
     );

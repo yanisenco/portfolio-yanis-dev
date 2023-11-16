@@ -20,7 +20,7 @@
     width: auto;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 900px) {
     .containerAboutMe {
         width: 70vw;
         display: flex;

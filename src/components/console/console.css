@@ -1,4 +1,46 @@
-.textFont{
-    font-family: 'Consolas';
-    font-variation-settings: 'wght' 50;
+.containerConsole{
+    position: relative;
+    height: 50vh;
+    width: 100vw;
+}
+.sizeConsole{
+    width: fit-content;
+    height: 20vh;
+}
+
+.headerConsole{
+    background-color: aliceblue;
+}
+
+.flex{
+    display: flex;
+}
+
+.titleConsole{
+    margin:0;
+    font-size: medium;
+}
+
+.closeButton, .reduceButton, .extendButton{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.closeButton{
+background-color: red;
+} 
+.reduceButton{
+background-color: orange;
+}
+.extendButton{
+background-color: green;
+}
+
+.contentConsole{
+    background-color: black;
+    color: greenyellow;
+}
+.descriptionContent{
+    margin: 0;
 }

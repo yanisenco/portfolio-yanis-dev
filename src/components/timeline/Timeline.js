@@ -1,6 +1,8 @@
 import React from 'react';
 import style from './timeline.css';
 import School from '../../pages/school/School';
+import useWidth from '../../hooks/useWidth';
+
 
 const Date = ({style}) => {
   return(
@@ -13,8 +15,8 @@ const Date = ({style}) => {
 };
 
 const Timeline = () => {
+const {width}= useWidth();
 
-const width = window.innerWidth;
 const content =[
   {
     title : "title",

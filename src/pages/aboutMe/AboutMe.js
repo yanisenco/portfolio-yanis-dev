@@ -5,12 +5,12 @@ import data from '../../assets/texte/aboutme';
 
 const AboutMe = () => {
 
-    const bulletPoint = data.presentation.map((presentation, index) => {
-        return (
-            <li key={index}>{presentation}</li>
-        );
-    }
-);
+        const bulletPoint = data.presentation.map((presentation, index) => {
+            return (
+                <li key={index}>{presentation}</li>
+            );
+        }
+    );
 
     return (
         <div className='containerAboutMe'>
