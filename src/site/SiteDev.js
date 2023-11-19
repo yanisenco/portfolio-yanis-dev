@@ -6,7 +6,7 @@ import NavigationHeader from '../components/navigationHeader/NavigationHeader';
 const SiteDev = () => {
     return (
         <div>
-            {/* <Home/> */}
+            <Home/>
             <NavigationHeader/> 
         </div>
     );

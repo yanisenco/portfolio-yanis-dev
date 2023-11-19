@@ -18,6 +18,7 @@
 }
 
 .time{
+  margin: 0 1vw;
   margin-top: 20px;
   height: fit-content;
   width: fit-content;
@@ -50,4 +51,8 @@
   .containerTimeline{
     margin:0;
   }
+}
+
+.sideItem{
+  width:47%;
 }

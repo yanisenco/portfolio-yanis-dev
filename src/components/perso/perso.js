@@ -4,7 +4,9 @@ import Slider from '../slider/Slider';
 import VideoPlayer from '../videoPlayer/VideoPlayer';
 import useWidth from '../../hooks/useWidth';
 
-const Perso = ({children}) => {
+const Perso = (props) => {
+
+    const { title, description, children } = props;
 
     const {width}= useWidth();
     
@@ -13,8 +15,8 @@ const Perso = ({children}) => {
             responsiveContent = 
             <>
                 <div className='textePerso'>
-                    <h2>Digitalisation</h2>
-                    <p>Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association</p>
+                    <h2>{title}</h2>
+                    <p>{description}</p>
                 </div>   
                 <div className='contentPerso'>
                      {children}
@@ -23,11 +25,11 @@ const Perso = ({children}) => {
         } else {
             responsiveContent = 
                 <div className='textePerso'>
-                    <h2>Digitalisation</h2>
+                    <h2>{title}</h2>
                     <div className='contentPerso'>
                         {children}
                     </div>
-                    <p>Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association Voici un projet de numérisation de dession que j'ai pu effectuer sur photoshop pour un evenement porté par une association</p>
+                    <p>{description}</p>
                 </div>   
         }
 

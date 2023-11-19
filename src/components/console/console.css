@@ -5,7 +5,7 @@
     margin:auto;
 }
 .sizeConsole{
-    width: fit-content;
+    width: 50vw;
     height: 20vh;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .titleConsole{
-    margin:0;
+    margin:auto;
     font-size: medium;
 }
 
@@ -26,6 +26,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
+    margin: auto 2px;
 }
 
 .closeButton{
@@ -39,9 +40,17 @@ background-color: green;
 }
 
 .contentConsole{
+    padding:1vw;
+    height:40vh;
     background-color: black;
     color: greenyellow;
 }
 .descriptionContent{
     margin: 0;
+}
+
+.contactText{
+    color: unset;
+    display: block; 
+    margin-top:1vw;
 }

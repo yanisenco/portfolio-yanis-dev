@@ -4,9 +4,8 @@
 
 .shapePerso{
     float: left;
-    shape-outside: url("../../assets/images/avatar.svg");
-    shape-margin: 15px;
-    width: 200px;
+    shape-outside: url("../../assets/images/rond.png");
+    max-width: 15vw;
     height: auto;
 }
 

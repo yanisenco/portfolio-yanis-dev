@@ -14,7 +14,7 @@ export default {
         {
             "path": "C:\u005CUser\u005Cyanis\u005Clinkedin>",
             "personalLink": "https://www.linkedin.com/in/yanis-encognere-194146222/",
-            "message": " www.linkedin.com",            
+            "message": " www.linkedin.com/yanis-encognere",            
         },
     ]
 }

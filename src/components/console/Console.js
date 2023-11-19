@@ -5,11 +5,7 @@ import './console.css';
 const Console = () => {
 
     const contacts = data.contacts.map((contact) => {
-        return (
-            <div>
-                <a href={contact.personalLink}>{contact.path}{contact.message}</a>
-            </div>
-            );
+        return <a href={contact.personalLink} className='contactText'>{contact.path}{contact.message}</a>;
         }
     );
 
@@ -85,9 +81,7 @@ const handleMouseDown = (event) => {
                 <div className="contentConsole">
                     <p className='descriptionContent'>Yanis Portfolio [version 2.0.19045.2364]</p>
                     <p>(c) Yanis Corporation. All rights reserved.</p>
-                    <div className="">
-                        {contacts}
-                    </div>                
+                    {contacts}             
                 </div>
             </div>
         </div>

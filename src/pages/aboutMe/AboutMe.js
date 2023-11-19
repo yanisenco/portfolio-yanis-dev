@@ -1,6 +1,6 @@
 import React from 'react';
 import './aboutme.css';
-import perso from '../../assets/images/avatar.svg';
+import perso from '../../assets/images/rond.png';
 import data from '../../assets/texte/aboutme';
 import BoutonCv from '../../components/boutonCv/BoutonCv';
 

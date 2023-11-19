@@ -28,3 +28,10 @@
 .containerSlider{
   z-index: 3;
 }
+
+@media (max-width: 900px) {
+  .containerSlider{
+    height: 40vw;
+  }
+}
+

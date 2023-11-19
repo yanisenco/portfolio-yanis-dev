@@ -1,7 +1,7 @@
 .containerPerso{
     display: flex;
     width: 70vw;
-    margin:auto;
+    margin: 4vw auto;
 }
 
 .contentPerso{
@@ -17,10 +17,12 @@
 
 @media (max-width: 900px) {
     .textePerso{
-        width: 100%;
+        margin: auto;
+        width: 70%;
     }
     .contentPerso{
-        margin: auto ;
+        width: 100%;
+        height: 100%;
     }
     .containerPerso{
         width: auto;

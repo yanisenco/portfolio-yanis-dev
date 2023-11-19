@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './timeline.css';
 import School from '../school/School';
 import useWidth from '../../hooks/useWidth';
 
 
-const Date = ({style}) => {
+const Date = ({style, date}) => {
   return(
-    <div style={style}>
+    <div style={style} className='sideItem dateMargin'>
       <div className="time">
-        <h4 className="dateH4">January 2018</h4>
+        <h4 className="dateH4">{date}</h4>
       </div>
     </div>
     )
@@ -18,63 +18,91 @@ const Timeline = () => {
 const {width}= useWidth();
 
 const content =[
-  {
-    title : "title",
-    description:"description"
+  {date:'2023',
+  exp:[
+    {
+      title : "Capgemini",
+      description:"stage - developpeur front end reactJS"
+    },
+    {
+      title : "CESI",
+      description:"projets : developpement C#,traitement de données (big data), gestion d'un S.I "
+    },
+    {
+      title : "Capgemini",
+      description:"alternance - developpeur front end reactJS"
+    },
+  ]
   },
-  {
-    title : "title1",
-    description:"description1 description2 description2 description2 description2 description2 description2 description2 description2 "
+  {date:'2022',
+  exp:[
+    {
+      title : "CESI",
+      description:"projets : : developpement C arduino, developpement en C ++,architecture d'un réseau& developpement web"
+    }
+  ]
   },
-  {
-    title : "title2",
-    description:"description2 description2 description2 description2 description2 description2 description2 description2 "
+  {date:'2021',
+  exp:[
+    {
+      title : "CESI",
+      description:"projets : traitement du signal & gestion de base de données (SQL)"
+    },
+    {
+      title : "Estuaire et sillon",
+      description:"saisonnier - ripeur"
+    }
+  ]
   },
-  {
-    title : "title3",
-    description:"description3"
-  },
-  {
-    title : "title4",
-    description:"description4"
+  {date:'2017',
+  exp:[
+    {
+      title : "La Banque Postale",
+      description:"stage - conception d'interface"
+    }
+  ]
   },
 ];
 
-const rightItem = {
-  width:'47%',
-}
-
-const leftItem={
-  width:'47%',
-  display: "flex",
-  justifyContent: "flex-end",
+const flexEnd={
+  flexDirection: 'column',
+  display: 'flex',
+  alignItems: 'flex-end',
 }
 
 const timeline = content.map((item, index)=>{
+  const experience = item.exp.map((item,index)=>{
+    return  <School title={item.title} description={item.description} key={index}/>
+  })
 
   if (index % 2 === 1 && width> 900) {
     return (
         <li className='experience'>
-          <School title={item.title} description={item.description} style={leftItem}/>
-            <div className="timeline centerItem"><div className='cercle'></div></div>
-          <Date style={rightItem}/>
+          <div className='sideItem' style={flexEnd}>
+             {experience}
+          </div>
+          <div className="timeline centerItem"><div className='cercle'></div></div>
+          <Date date={item.date}/>
         </li>
         )  
   }else if (index % 2 === 0 && width> 900){
     return (
       <li className='experience'>
-        <Date style={leftItem}/>
-          <div className="timeline centerItem"><div className='cercle'></div></div>
-        <School title={item.title} description={item.description} style={rightItem}/>
+        <Date date={item.date} style={flexEnd}/>
+        <div className="timeline centerItem"><div className='cercle'></div></div>
+        <div className='sideItem'>
+          {experience}
+        </div>
       </li>
       )  
   }else{
+
     return (
       <li className='experience'>
         <div className="timeline centerItem"><div className='cercle'></div></div>
         <div>
-          <Date/>
-          <School title={item.title} description={item.description}/>
+          <Date date={item.date} style={{marginLeft:'2vw'}}/>
+          {experience}
         </div>
       </li>
       )  
