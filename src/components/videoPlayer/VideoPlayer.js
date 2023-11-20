@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './videoPlayer.css';
+import './videoPlayer.css';
 import montageVideo from '../../assets/video/montageVideo.mp4';
 
 const VideoPlayer = () => {

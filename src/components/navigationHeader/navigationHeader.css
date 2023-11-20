@@ -7,3 +7,13 @@
       display: none;
     }
 }
+
+.titlePart{
+
+    text-align: center;
+    background-image: linear-gradient(to right, #92D7CF, #0D564F); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+
+}

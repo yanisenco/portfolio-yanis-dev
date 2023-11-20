@@ -1,18 +1,19 @@
 import React, {useState, useEffect, useRef} from 'react';
 import data from '../../assets/texte/contact';
 import './console.css';
+import useWidth from '../../hooks/useWidth';
 
-const Console = () => {
+const Console = ({desktop}) => {
 
     const contacts = data.contacts.map((contact) => {
         return <a href={contact.personalLink} className='contactText'>{contact.path}{contact.message}</a>;
         }
     );
-
+    const {width}= useWidth();
     const parentRef = useRef(null);
     const [isDragging, setIsDragging] = useState(false);
     const [initialPos, setInitialPos] = useState({ x: 0, y: 0 });
-    const [position, setPosition] = useState({ x: 200, y: 0 });
+    const [position, setPosition] = useState({ x: width/4, y: 0 });
 
 
 
@@ -46,27 +47,34 @@ useEffect(() => {
 }, [isDragging, initialPos]);
 
 const handleMouseDown = (event) => {
-  event.preventDefault();
-  setIsDragging(true);
-  setInitialPos({
-    x: position.x,
-    y: position.y,
-    clientX: event.clientX,
-    clientY: event.clientY,
-  });
+  if (desktop) {    
+    event.preventDefault();
+    setIsDragging(true);
+    setInitialPos({
+      x: position.x,
+      y: position.y,
+      clientX: event.clientX,
+      clientY: event.clientY,
+    });
+  }
 };
+
+let style = null;
+if (desktop) {
+  style ={
+    position:'absolute',
+    top: position.y,
+    left: position.x,
+    cursor: 'move',
+}
+}
 
     return (
         <div className='containerConsole'>
             <div 
                 className="sizeConsole" 
                 id="invite-de-contact"
-                style={{
-                    position:'absolute',
-                    top: position.y,
-                    left: position.x,
-                    cursor: 'move',
-                }}
+                style={style}
                 onMouseDown={handleMouseDown}
                 ref={parentRef}
             >
@@ -75,7 +83,7 @@ const handleMouseDown = (event) => {
                         <div className='closeButton'></div>
                         <div className='reduceButton'></div>
                         <div className='extendButton'></div>
-                        <h1 className="titleConsole">C:\_ contact prompt</h1>
+                        <h2 className="titleConsole">C:\_ contact prompt</h2>
                     </div>                
                 </div>
                 <div className="contentConsole">

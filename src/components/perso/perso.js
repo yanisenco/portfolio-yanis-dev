@@ -1,25 +1,32 @@
-import React,{useEffect} from 'react';
-import style from './perso.css';
-import Slider from '../slider/Slider';
-import VideoPlayer from '../videoPlayer/VideoPlayer';
+import React from 'react';
+import './perso.css';
 import useWidth from '../../hooks/useWidth';
 
 const Perso = (props) => {
-
-    const { title, description, children } = props;
-
+    const { title, description, children, left } = props;
     const {width}= useWidth();
     
+    console.log(left)
     let responsiveContent = null;
-        if (width > 900) {
+        if (width > 900 && left) {
             responsiveContent = 
-            <>
+            <>    
+                <div className='contentPerso'>
+                        {children}
+                </div>
+                <div className='textePerso'>
+                    <h2>{title}</h2>
+                    <p>{description}</p>
+                </div>   
+            </>
+        } else if(width > 900 && !left){
+            responsiveContent =  <>    
                 <div className='textePerso'>
                     <h2>{title}</h2>
                     <p>{description}</p>
                 </div>   
                 <div className='contentPerso'>
-                     {children}
+                        {children}
                 </div>
             </>
         } else {

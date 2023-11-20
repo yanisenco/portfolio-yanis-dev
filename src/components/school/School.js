@@ -6,7 +6,7 @@ const School = ({title, description}) => {
 
     return (
         <div className="experienceBackground" >
-            <h4 className='schoolTitle'>{title}</h4>
+            <h3 className='schoolTitle'>{title}</h3>
             <p>{description}</p>
         </div>
     );

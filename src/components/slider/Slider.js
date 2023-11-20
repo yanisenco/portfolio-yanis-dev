@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './slider.scss';
-import pieuvre from '../../assets/images/pieuvre.jpg';
-import pieuvreColoriage from '../../assets/images/pieuvre-coloriage.jpg';
+import pieuvre from '../../assets/images/webp/pieuvre2.webp';
+import pieuvreColoriage from '../../assets/images/webp/pieuvre-coloriage2.webp';
 import fleche from '../../assets/images/double-fleche.png';
 
 const Slider = () => {
@@ -23,11 +23,11 @@ const Slider = () => {
 
   return (
         <div onMouseMove={handleMouseMove} id="container" className='containerSlider'>
-              <img src={fleche} className='image-3' id="fleche" 
+              <img src={fleche} className='image-3' id="fleche" alt="flèches directionnelles"
               style={{ left: '155px',top: '85px',display : onHover && 'none' }}
               />
-              <img src={pieuvre} className='image-1' id="topImage" style={{ clip: `rect(${clipValue})`}}/>
-              <img src={pieuvreColoriage} className='image-2' id="bottomImage"/>
+              <img src={pieuvre} className='image-1' id="topImage" style={{ clip: `rect(${clipValue})`}} alt="dessin digitalisé de pieuvre"/>
+              <img src={pieuvreColoriage} className='image-2' id="bottomImage" alt="dessin de pieuvre"/>
       </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './timeline.css';
 import School from '../school/School';
 import useWidth from '../../hooks/useWidth';
@@ -8,7 +8,7 @@ const Date = ({style, date}) => {
   return(
     <div style={style} className='sideItem dateMargin'>
       <div className="time">
-        <h4 className="dateH4">{date}</h4>
+        <h2 className="dateH2">{date}</h2>
       </div>
     </div>
     )

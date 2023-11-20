@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import style from './imageProjet.css';
-import pieuvre from '../../assets/images/pieuvre.jpg'
+import './imageProjet.css';
 
-const ImageProjet = ({src, id}) => {
+const ImageProjet = ({src, id, style,alt}) => {
 
     const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
@@ -18,7 +17,6 @@ const ImageProjet = ({src, id}) => {
   
     useEffect(() => {
       const element = document.getElementById(id);
-  
       if (element) {
         element.addEventListener('mousemove', handleMouseMove);
   
@@ -34,8 +32,8 @@ const ImageProjet = ({src, id}) => {
     };
 
   return (
-        <div onMouseMove={handleMouseMove} className='containerImageProjet'>
-              <img src={src} className='imageProjet shadowImageProjet' style={tiltStyle} id={id} />
+        <div onMouseMove={handleMouseMove} onMouseLeave={()=>setTilt({ x: 0, y: 0 })} className='containerImageProjet' style={style}>
+              <img src={src} className='imageProjet shadowImageProjet' style={tiltStyle} id={id} alt={alt}/>
         </div>
   );
 };

@@ -4,7 +4,7 @@
 
 .shapePerso{
     float: left;
-    shape-outside: url("../../assets/images/rond.png");
+    shape-outside: url("../../assets/images/webp/rond.webp");
     max-width: 15vw;
     height: auto;
 }

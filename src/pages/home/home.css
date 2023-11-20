@@ -1,5 +1,16 @@
+.homeText{
+	margin: auto;
+	text-align: center;
+	background-image: linear-gradient(to right, #92D7CF, #0D564F); 
+	-webkit-background-clip: text; 
+	-webkit-text-fill-color: transparent; 
+	background-clip: text;
+}
+
 .bgDevImage{ 
-	height: 60vh; 
+	object-fit: cover;
+    width: 60vw;
+    /* height: 100%; */
 	margin: auto 10px auto auto;
 }
 
@@ -13,24 +24,24 @@
 .titleHome{
 	width: 40vw;
 	color: white;
-	margin: auto 0;
+	margin: auto;
 	font-size: 5vw;
 }
 
 @media (max-width: 900px) {
     .containerHome{
 		flex-direction: column;
-		height: auto;
+		height: 100vh;
     }
 
 	.bgDevImage{ 
-		height: auto; 
-		margin: 15vh 0 0 0 ;
+		margin: auto;
+    	width: 100%;
 	}
 	.titleHome{
 		text-align: center;
-		margin: 15vh 0 0 0;
-		font-size: 10vw;
+		margin: 15vh auto 0;
+		font-size: 7vw;
 		align-self: center;
 	}
 }
