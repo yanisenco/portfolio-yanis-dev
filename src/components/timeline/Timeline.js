@@ -18,7 +18,15 @@ const Timeline = () => {
 const {width}= useWidth();
 
 const content =[
-  {date:'2023',
+  {date:'en cours',
+  exp:[
+    {
+      title : "Capgemini",
+      description:"alternance - developpeur front end reactJS"
+    },
+  ]
+  },{
+  date:'2023',
   exp:[
     {
       title : "Capgemini",
@@ -38,7 +46,7 @@ const content =[
   exp:[
     {
       title : "CESI",
-      description:"projets : : developpement C arduino, developpement en C ++,architecture d'un réseau& developpement web"
+      description:"projets : developpement C arduino, developpement en C ++, architecture d'un réseau, developpement web"
     }
   ]
   },
@@ -47,10 +55,6 @@ const content =[
     {
       title : "CESI",
       description:"projets : traitement du signal & gestion de base de données (SQL)"
-    },
-    {
-      title : "Estuaire et sillon",
-      description:"saisonnier - ripeur"
     }
   ]
   },

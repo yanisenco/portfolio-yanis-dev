@@ -1,19 +1,19 @@
 export const idfm =
         {
             "title": "PRIM - Ile-de-France Mobilités", 
-            "description": "Le projet IDFM - PRIM consiste à mettre à disposition des pofessionnels des APIs. Ces dernières peuvent être mise à disposition par des professionnels ou l'île de france mobilité. J'ai effectué une période de stage de 15 semaines au sein de ce projet, durant lequel j'ai fait du front end en ReactJS ce qui m'a permis d'apprendre les bases de ce framework ainsi que de dévolopper mes compétences en CSS. ",
+            "description": "Le projet IDFM - PRIM consiste à mettre à disposition de pofessionnels des APIs. Ces dernières peuvent être mises à disposition par d'autres professionnels ou bien l'île de france mobilité. J'ai effectué une période de stage de 15 semaines au sein de ce projet, durant lequel j'ai fait du front end en ReactJS ce qui m'a permis d'apprendre les bases de ce framework ainsi que de développer mes compétences en CSS. ",
         };
 
 export const dalida =        
         {
             "title": "DALIDA",
-            "description": "Dalida (Droits d'Accès au Lecteur Informatique Des Agents) est un application qui permet de définir les droits d'accès et de gestion au lecteur réseau par le biais de l'Active Directory de la banque postale. Durant un stage au sein de la Banque Postale, j'ai eu l'opportunité de participer à la conception de cette application bureau. L'objectif étant qu'elle soit accessible et légère, afin de faciliter son déploiement sur des postes de travail",
+            "description": "Dalida (Droits d'Accès au Lecteur Informatique Des Agents) est une application qui permet de définir les droits d'accès et de gestion au lecteur réseau par le biais de l'Active Directory de la banque postale. Durant un stage au sein de la Banque Postale, j'ai eu l'opportunité de participer à la conception de cette application bureau. L'objectif étant qu'elle soit accessible et légère, afin de faciliter son déploiement sur des postes de travail",
         };
         
 export const vega =
         {
             "title": "Site de vente aux enchères",
-            "description": "Actuellement développeur front end sur un projet de ventes aux enchères. Ce dernier à pour objectif de créer un site de bout en bout permettant à des particuliers ainsi que des professionnels d'acheter des biens aux enchères. Ce projet est développé en magento 2 pour la partie back-end , suivi d'une partie nodeJS pour la gestion du temps réel. Pour ce qui est de la partie front-end sur laquelle je travaille, elle est développée en reactJS et PWA studio.",
+            "description": "Actuellement développeur front end sur un projet de vente aux enchères. L'objectif ici est de créer un site de bout en bout permettant à des particuliers ainsi que des professionnels d'acheter des biens aux enchères. Ce projet est développé en magento 2 pour la partie back-end , suivi d'une partie nodeJS pour la gestion du temps réel. Pour ce qui est de la partie front-end sur laquelle je travaille, elle est développée en reactJS et PWA studio.",
         };
 
 export const digitalisation =

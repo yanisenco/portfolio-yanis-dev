@@ -28,17 +28,17 @@ const NavigationHeader = () => {
             url:"#cursus"
         },
         {
-            title:"Projets pro",
+            title:"Projets professionnels",
             url:"#professional"
         },
         {
-            title:"Projet perso",
+            title:"Projets personnels",
             url:"#personnal"
         },
-        {
-            title:"Recommandation",
-            url:"#recommandation"
-        },
+        // {
+        //     title:"Recommandation",
+        //     url:"#recommandation"
+        // },
         {
             title:"Contact",
             url:"#contact"
@@ -62,20 +62,20 @@ const NavigationHeader = () => {
             <Timeline/>
         </div>
         <div id="professional" className="section">
-            <h1 className='titlePart'>Projets pro</h1>
-            <Perso title={idfm.title} description={idfm.description} left={false}><a href='https://prim.iledefrance-mobilites.fr/fr'><ImageProjet src={idfmPic} id={"idfm"} alt={"site prim île de france mobilité"}/></a></Perso>
+            <h1 className='titlePart'>Projets professionnels</h1>
+            <Perso title={idfm.title} description={idfm.description} left={false}><a href='https://prim.iledefrance-mobilites.fr/fr' target="_blank"><ImageProjet src={idfmPic} id={"idfm"} alt={"site prim île de france mobilité"}/></a></Perso>
             <Perso title={dalida.title} description={dalida.description} left={true}><ImageProjet src={dalidaPic} id={"dalida"} style={style} alt={"application métier dalida"}/></Perso>
             <Perso title={vega.title} description={vega.description} left={false}><ImageProjet src={vegaPic} id={"vega"} alt={"image confidentielle"}/></Perso>
         </div>
         <div id="personnal" className="section">
-            <h1 className='titlePart'>Projet perso</h1>
+            <h1 className='titlePart'>Projets personnels</h1>
             <Perso title={digitalisation.title} description={digitalisation.description} left={false}><Slider/></Perso>
             <Perso title={montage.title} description={montage.description} left={true}><div style={style}><VideoPlayer /></div></Perso>
-            <Perso title={photo.title} description={photo.description} left={false}><ImageProjet src={photographiePic} id={"photographie"} alt={"photographie de champignon"}/></Perso>
+            <Perso title={photo.title} description={photo.description} left={false}><a href='https://www.flickr.com/photos/199591906@N03/' target="_blank"><ImageProjet src={photographiePic} id={"photographie"} alt={"photographie de champignon"}/></a></Perso>
         </div>
-        <div id="recommandation" className="section">
+        {/* <div id="recommandation" className="section">
             <h1 className='titlePart'>Recommandation</h1>
-        </div>
+        </div> */}
         <div id="contact" className="section">
             <h1 className='titlePart'>Contact</h1>
             {width > 900 ?  <Console desktop={true}/> : <Console desktop={false}/>}

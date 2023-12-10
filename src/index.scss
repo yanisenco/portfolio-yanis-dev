@@ -4,14 +4,27 @@
   }
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    overflow-y: scroll;
+
     background-color:#04181D;
+    margin:0;
 }
 
-body::-webkit-scrollbar {
-    display: none;
+
+body::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: #04181D;
+}
+
+body::-webkit-scrollbar
+{
+	width: 12px;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #0D564F;
 }
 
 html {
